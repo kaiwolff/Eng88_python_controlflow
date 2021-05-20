@@ -19,8 +19,6 @@ while True:
         print("You may watch ratings 12, PG, or U")
     elif int(age) < 12:
         print("You may watch U-rated films, or PG films if you are with a parent")
-    else:
-        print("Input not recognised, please try again.")
 
     rating = input("\nPlease enter the age rating of the film you are trying to watch (U, PG, 12, 15, or 18): ")
 
@@ -47,7 +45,5 @@ while True:
     else:
         print("You may, unfortunately, not watch this movie.")
         break
-
-
 
 print("Thank you for using cinema_checker")
