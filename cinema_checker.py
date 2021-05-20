@@ -22,8 +22,8 @@ while True:
     # print(now)
     #
     # print((now-birthdate).days)
-    age = ((birthday_time, date.today()).days)/365.25
-    print(age)
+    age = ((now-birthdate).days)/365.25
+    print(f"Your age is {int(age)}")
 
     if int(age) >= 18:
         print("You can watch any films we have")
