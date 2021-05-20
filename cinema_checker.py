@@ -3,7 +3,7 @@ import datetime
 
 while True:
 
-    birthday = input("\nPlease enter your DOB in the format DD/MM/YY. Enter 'exit' to quit the program: ")
+    birthday = input("\nPlease enter your DOB in the format DD/MM/YYYY. Enter 'exit' to quit the program: ")
 
     if birthday == "exit":  # this allows the user to quit if they enter 'exit'
         break
@@ -18,10 +18,6 @@ while True:
     now = datetime.date.today()
     birthdate = datetime.date(birthday_time[0], birthday_time[1], birthday_time[2])
 
-    # print(birthdate)
-    # print(now)
-    #
-    # print((now-birthdate).days)
     age = ((now-birthdate).days)/365.25
     print(f"Your age is {int(age)}")
 
