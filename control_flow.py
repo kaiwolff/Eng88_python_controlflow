@@ -8,8 +8,9 @@ weather = "rainy"
 if weather == "sunny": #remember to use the colon. Also to indent
     print("Enjoy the weather!")
 
-elif weather == "rainy":
+elif weather == "rainy":#this will run shoudl the if statement not be true, but another set of conditions is fulfilled
     print("Remember to take an umbrella")
+
 else: #this code will run if none of the other options are fulfilled
     #Good practice is to have a contingency should the if statement not activate, so that we can be sure that the code actually ran.
     print("'Something went wrong, input was not recognised")
