@@ -25,17 +25,17 @@
 #used to iterate through data collections, e.g. Lists, Dicts, Sets, etc.
 #Can also iterate through strings
 #First playaround with a for loop
-list_data = [1, 2, 3, 4, 5]
-for list in list_data: #this will iterate through list_data, giving each index the name "list" in the code block
-    if list == 5:
-        print("found 5")
-    if list == 2:
-        print("found 2")
-    if list == 3:
-        print("found 3")
-    print(list)
-else:
-    print("Better luck next time")
+# list_data = [1, 2, 3, 4, 5]
+# for list in list_data: #this will iterate through list_data, giving each index the name "list" in the code block
+#     if list == 5:
+#         print("found 5")
+#     if list == 2:
+#         print("found 2")
+#     if list == 3:
+#         print("found 3")
+#     print(list)
+# else:
+#     print("Better luck next time")
 #playing with a dictionary
 # student_1 = {
 #    "name" : "Kai Wolff",
@@ -50,3 +50,15 @@ else:
 #         break
 #     print(data)
 # #notice the nesting of loops. This is what makes programs powerful.
+
+#While loops - these stay active WHILE some condition is active
+
+user_prompt = True
+while user_prompt:
+    age = input("Please enter your age: ")
+    if age.isdigit():
+        user_prompt = False
+    else:
+        print("Please provide your answer as a digit.")
+
+print(f"Your age is {age}")

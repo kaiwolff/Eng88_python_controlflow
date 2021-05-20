@@ -1,15 +1,29 @@
+import time
+import datetime
 
 while True:
 
-    age = input("\nPlease enter your age. Enter 'exit' to quit the program: ")
+    birthday = input("\nPlease enter your DOB in the format DD/MM/YY. Enter 'exit' to quit the program: ")
 
-    #checking if wanting to exit, or restarting if input not recognised.
-    if age.isdigit() != True:
-        if age == "exit": #this allows the user to quit if they enter 'exit'
-            break
-        else:
+    if birthday == "exit":  # this allows the user to quit if they enter 'exit'
+        break
+    else: #this will attempt to convert the DOB into a datetime, and will re-prompt if the input isn't recognised
+        try:
+            birthday_time = time.strptime(birthday, "%d/%m/%Y")
+            #now have a time_struct object. convert to datetime
+        except:
             print("Input not recognised, please try again")
             continue
+
+    now = datetime.date.today()
+    birthdate = datetime.date(birthday_time[0], birthday_time[1], birthday_time[2])
+
+    # print(birthdate)
+    # print(now)
+    #
+    # print((now-birthdate).days)
+    age = ((birthday_time, date.today()).days)/365.25
+    print(age)
 
     if int(age) >= 18:
         print("You can watch any films we have")
@@ -36,7 +50,6 @@ while True:
     else:
         print("The input for rating was not recognised. Please try again")
         continue
-
 
     #finally, display outcome
     if can_watch:
